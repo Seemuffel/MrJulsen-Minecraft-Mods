@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Railways Navigator - Navigator Item</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333333;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+        }
+
+        .jumbotron {
+            background-color: rgba(51, 51, 51, 0.5);
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+        }
+
+        .logo-img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        .bg {
+            animation: slide 5s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #050505 50%, #111 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: 0.5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 6s;
+        }
+
+        .bg3 {
+            animation-duration: 7s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-20%);
+            }
+
+            100% {
+                transform: translateX(20%);
+            }
+        }
+
+        .footer {
+            background-color: rgba(51, 51, 51, 0.5);
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+            opacity: 0.5;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: lightgray;
+        }
+
+        .btn-primary:hover {
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <!-- Back-Button -->
+    <div class="container mt-3">
+        <a href="#" onclick="history.back()" class="btn btn-primary" style="background-color: rgba(51, 51, 51, 0.5); border: 1px solid #666666;"> <-- Zurück</a>
+    </div> 
+
+    <div class="container mt-5">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container d-flex align-items-center justify-content-center">
+                <img src="../assets\pictures\crn\navigator.png" alt="navigator Bild" class="logo-img">
+                <h1 class="display-2">Navigator Item</h1> <!-- Größere Überschrift -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Text -->
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Description</h1>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/0.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8">
+                <p>The navigator is a handy item that you carry in your inventory. Similar to a mobile phone, it allows
+                    you to
+                    check schedules, search for connections, verify delays, and organize your travels. With its
+                    user-friendly
+                    interface, the navigator makes train travel a straightforward experience. <br> <br> The item is
+                    crafted in a
+                    Mechanical Crafter. You need 5 Iron Sheets, 4 Andesite Alloys, 1 Copper Sheet, 1 Glass Pane and 1
+                    Precision Mechanism.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Explanation</h1>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <p>This is the main page of the Create Railway Navigator. Here you can set a starting point and an
+                    endpoint and then search for trains that travel this route.
+                    The button in the top right automatically sets the currently nearest station.
+                    Below that button is the search button.
+                    Below that, the trains that travel between are displayed.
+                    Transfers are also displayed depending on the route.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/1.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/2.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8">
+                <p>The button on the bottom left takes the user to the search settings. There, you can set how long you
+                    want the minimum transfer time to be when the navigator searches for a route where you have to
+                    change trains. Additionally, you can select train categories in the train filter that you want to be
+                    displayed. These can be changed in the global settings.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8">
+                <p>In the Global Settings, you can adjust all Navigator and Display-specific configurations. Firstly, in
+                    the Train Station Tags section, you can specify which stations belong to a particular station. For
+                    instance, if there are two platforms in a station with different names, you can group them under one
+                    name and input the platform numbers. On the Train Station Blacklist, you can enter stations that
+                    shouldn't be displayed on the displays and in the navigator. With Train Groups, you can determine
+                    which trains are grouped together, giving them a unified name. Lastly, the Train Blacklist allows
+                    you to specify which trains should not be displayed, such as freight trains or test trains. <br>
+                    <a style="text-decoration: underline;"> The global settings are synchronized on a server for all players.</a></p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/3.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <br style="margin-bottom: 100px;">
+
+    <!--
+    <div class="footer">
+        <div class="container text-center">
+            <a href="Impressum.html" style="text-decoration: none; color: white;">Impressum</a> | <a
+                href="Datenschutz.html" style="text-decoration: none; color: white;">Datenschutz</a>
+        </div>
+    </div>
+    -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

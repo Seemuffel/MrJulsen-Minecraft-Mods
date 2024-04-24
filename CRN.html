@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Railways Navigator - Main</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333333;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+        }
+
+        .jumbotron {
+            background-color: rgba(51, 51, 51, 0.5);
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+        }
+
+        .logo-img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+
+        .bg {
+            animation: slide 5s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #050505 50%, #111 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: 0.5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 6s;
+        }
+
+        .bg3 {
+            animation-duration: 7s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-20%);
+            }
+
+            100% {
+                transform: translateX(20%);
+            }
+        }
+
+        .footer {
+            background-color: rgba(51, 51, 51, 0.5);
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+            opacity: 0.5;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: lightgray;
+        }
+
+        .btn-primary:hover {
+            border-color: #ffffff;
+        }
+
+        .hoverbild {
+            transition: transform 0.3s ease-in-out !important;
+        }
+
+        .hoverbild:hover {
+            transform: scale(1.2) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="container mt-3">
+        <a href="#" onclick="history.back()" class="btn btn-primary"
+            style="background-color: rgba(51, 51, 51, 0.5); border: 1px solid #666666;"> <-- Zurück</a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container d-flex align-items-center justify-content-center">
+                <img src="../assets/pictures/crn.png" alt="CRN Bild" class="logo-img">
+                <h1 class="display-2">Create Railways Navigator</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Description</h1>
+    </div>
+    <div class="container mt-3">
+        <p>This mod adds a new item, the Create Railways Navigator, which is inspired by the DB Navigator (an app in
+            Germany where, among other things, you can get possible train connections). Like this app, the navigator in
+            this mod is intended to suggest possible train connections for trains from the Create Mod in your Minecraft
+            world. Various customization options allow you to specify which track stations should be treated as a single
+            station and how your navigation results should be filtered and sorted so that you always receive the best
+            possible route suggestions.</p>
+    </div>
+    <div class="container mt-3">
+        <p>The mod can be found for forge 1.18.2, 1.19.2 and 1.20.1 on modrinth and cursforge.</p>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <a href="https://modrinth.com/mod/create-railways-navigator" target="_blank"><img
+                        src="../assets/pictures/modrinth.png" alt="Modrinth Bild" class="nav-img"></a>
+                <a href="https://www.curseforge.com/minecraft/mc-mods/create-railways-navigator" target="_blank"><img
+                        src="../assets/pictures/curseforge.png" alt="CurseForge Bild" class="nav-img"
+                        style="margin-left: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Features</h1>
+    </div>
+
+    <div class="container mt-3">
+        <p>Create Railways Navigator features a Navigator Item, Advanced Displays and a Station Clock.</p>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a href="Navigator_Item.html"><img src="../assets\pictures\crn\navigator.png" alt="navigator Bild"
+                        class="hoverbild" class="nav-img"  style="width: 128px; height: 128px;"></a>
+                <p>Navigator Item</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="Advanced_Displays.html"><img src="../assets\pictures\crn\advanced_display.png"
+                        alt="display Bild" class="hoverbild" class="nav-img" style="width: 128px; height: 128px;"></a>
+                <p>Advanced Display</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="Train_Station_Clock.html"><img src="../assets\pictures\crn\train_station_clock.png"
+                        alt="clock Bild" class="hoverbild" class="nav-img" style="width: 128px; height: 128px;"></a>
+                <p>Train Station Clock</p>
+            </div>
+        </div>
+    </div>
+
+    <br style="margin-bottom: 100px;">
+
+    <!--
+    <div class="footer">
+        <div class="container text-center">
+            <a href="Impressum.html" style="text-decoration: none; color: white;">Impressum</a> | <a
+                href="Datenschutz.html" style="text-decoration: none; color: white;">Datenschutz</a>
+        </div>
+    </div>
+    -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

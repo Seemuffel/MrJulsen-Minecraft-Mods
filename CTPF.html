@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrJulsen Mods</title>
+    <title>Create Train Perspective Fix - Main</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #333333;
             color: white;
             font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
         }
 
         @font-face {
             font-family: 'Ubuntu';
-            src: url('assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+            src: url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
         }
 
         .jumbotron {
@@ -24,19 +25,10 @@
             box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
         }
 
-        .image-container {
-            text-align: center;
-        }
-
-        .image-container img {
+        .logo-img {
             width: 200px;
-            height: 200px;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.1);
+            height: auto;
+            margin-right: 20px;
         }
 
         html,
@@ -78,27 +70,6 @@
             }
         }
 
-        .image-container img {
-            width: 200px;
-            height: 200px;
-            margin: 10px;
-            transition: transform 0.3s, box-shadow 0.5s;
-            box-shadow: 0px 0px 5px 0px gray;
-        }
-
-        .image-container img.round {
-            border-radius: 50%;
-        }
-
-        .image-container img.square {
-            border-radius: 15px;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 0px 10px 5px gray;
-        }
-
         .footer {
             background-color: rgba(51, 51, 51, 0.5);
             border-radius: 15px;
@@ -118,6 +89,18 @@
         .footer a:hover {
             color: lightgray;
         }
+
+        .btn-primary:hover {
+            border-color: #ffffff;
+        }
+
+        .hoverbild {
+            transition: transform 0.3s ease-in-out !important;
+        }
+
+        .hoverbild:hover {
+            transform: scale(1.2) !important;
+        }
     </style>
 </head>
 
@@ -125,44 +108,45 @@
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
+
+    <div class="container mt-3">
+        <a href="#" onclick="history.back()" class="btn btn-primary"
+            style="background-color: rgba(51, 51, 51, 0.5); border: 1px solid #666666;"> <-- Zurück</a>
+    </div>
+
     <div class="container mt-5">
         <div class="jumbotron jumbotron-fluid text-center">
-            <div class="container">
-                <h1 class="display-2">MrJulsen Mods</h1>
-            </div>
-        </div>
-        <div class="image-container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="CRN/CRN.html" style="text-decoration: none; color: gray;">
-                        <img src="assets\pictures\crn.png" alt="CRN Bild" class="round" href="CRN/CRN.html">
-                        <p class="text-center">Create Railways Navigator</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="CTPF/CTPF.html" style="text-decoration: none; color: gray;">
-                        <img src="assets\pictures\ctpf.png" alt="CTPF Bild" class="round" href="CTPF/CTPF.html">
-                        <p class="text-center">Create Train Perspective Fix</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="coming_soon.html" style="text-decoration: none; color: gray;">
-                        <img src="assets\pictures\mineify.png" alt="Mineify Bild" class="square" href="Mineify/Mineify.html">
-                        <p class="text-center">Mineify</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="coming_soon.html" style="text-decoration: none; color: gray;">
-                        <img src="assets\pictures\trafficcraft.png" alt="Trafficcraft Bild" class="square"
-                            href="Trafficcraft/Trafficcraft.html">
-                        <p class="text-center">Trafficcraft</p>
-                    </a>
-                </div>
+            <div class="container d-flex align-items-center justify-content-center">
+                <img src="../assets/pictures/ctpf.png" alt="CRN Bild" class="logo-img">
+                <h1 class="display-2">Create Train Perspective Fix</h1>
             </div>
         </div>
     </div>
-    
-    <!-- Footer -->
+
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Description</h1>
+    </div>
+    <div class="container mt-3">
+        <p>The Create Train Perspective Fix mod is designed to connect the camera with the train rotation in Create trains. This prevents the need to constantly move the mouse in every curve.</p>
+    </div>
+    <div class="container mt-3">
+        <p>The mod can be found for forge and fabric 1.18.2, 1.19.2 and 1.20.1 on modrinth and cursforge.</p>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <a href="https://modrinth.com/mod/create-train-perspective-fix" target="_blank"><img
+                        src="../assets/pictures/modrinth.png" alt="Modrinth Bild" class="nav-img"></a>
+                <a href="https://www.curseforge.com/minecraft/mc-mods/create-train-perspective-fix" target="_blank"><img
+                        src="../assets/pictures/curseforge.png" alt="CurseForge Bild" class="nav-img"
+                        style="margin-left: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <br style="margin-bottom: 100px;">
+
     <!--
     <div class="footer">
         <div class="container text-center">
@@ -175,16 +159,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function showMobilePopup() {
-            var screenWidth = window.innerWidth;
-            if (screenWidth < 768) {
-                alert("The Website is not made for mobile devices or small screens!");
-            }
-        }
-        window.onload = showMobilePopup;
-    </script>
 </body>
 
 </html>
