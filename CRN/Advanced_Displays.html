@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Railways Navigator - Advanced Display</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333333;
+            /* Dunkelgrauer Hintergrund */
+            color: white;
+            /* Weiße Schriftfarbe */
+            font-family: 'Ubuntu', sans-serif;
+            /* Verwendung der Ubuntu-Schriftart */
+            font-size: 18px;
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('../assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+            /* Pfade zur Schriftartdatei */
+        }
+
+        .jumbotron {
+            background-color: rgba(51, 51, 51, 0.5);
+            /* Hintergrund mit Opazität */
+            border-radius: 15px;
+            /* Abgerundete Ecken */
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+        }
+
+        .logo-img {
+            width: 200px;
+            /* Größe des Logos anpassen */
+            height: auto;
+            /* Automatische Höhe */
+            margin-right: 20px;
+            /* Abstand zum Text */
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-size: cover;
+            /* Bildgröße anpassen */
+            background-position: top;
+            /* Bildposition */
+            background-repeat: no-repeat;
+            /* Wiederholung des Bildes verhindern */
+        }
+
+        .bg {
+            animation: slide 5s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #050505 50%, #111 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: 0.5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 6s;
+        }
+
+        .bg3 {
+            animation-duration: 7s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-20%);
+            }
+
+            100% {
+                transform: translateX(20%);
+            }
+        }
+
+        .footer {
+            background-color: rgba(51, 51, 51, 0.5);
+            /* Hintergrund mit Opazität */
+            border-radius: 15px;
+            /* Abgerundete Ecken */
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+            opacity: 0.5;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: lightgray;
+        }
+
+        .btn-primary:hover {
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <!-- Back-Button -->
+    <div class="container mt-3">
+        <a href="#" onclick="history.back()" class="btn btn-primary"
+            style="background-color: rgba(51, 51, 51, 0.5); border: 1px solid #666666;"> <-- Zurück</a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container d-flex align-items-center justify-content-center">
+                <img src="../assets/pictures/crn/advanced_display.png" alt="navigator Bild" class="logo-img">
+                <h1 class="display-2">Advanced Display</h1> <!-- Größere Überschrift -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Text -->
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Description</h1>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/4.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The Advanced Displays are specially designed displays for trains and stations. They can show a lot of
+                    information in a beautiful design. There are many settings that create various applications, leading
+                    to a better create train experience. <br>There are 4 different types of Advanced Displays:
+
+                    <br>1. Advanced Display
+                    <br>2. Advanced Display Block
+                    <br>3. Advanced Display Panel
+                    <br>4. Small Advanced Display
+                    <br><br>To craft the display, you'll need a crafting table with
+                    4 Andesite Alloys, 2 Sturdy Sheets, and 3 regular Display Boards. This recipe yields 6 Advanced
+                    Displays directly.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" style="border-bottom: 7px solid rgba(51, 51, 51, 0.5); padding-bottom: 10px;">
+        <h1 style="margin-top: 60px;">Explanation</h1>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/5.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">You can configure the displays with a wrench.
+                    There are multiple types in which the Advanced Display can be used. This is the main page of the
+                    Advanced Display Settings. On the bottom left there is a settings button for the global settings.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">There are 3 options settings you can change. The middle one is the Information type.
+                    That’s just the setting to determine how much information should be shown on the display.
+                    For this, there are three options available. Simple is not very detailed, and Informative has the most information.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/6.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/8.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">On the Display Settings, the first one is Display Type. This determines what information is shown on
+                    the Advanced Display.
+                    There are also three options available.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The first one, ‘Train Destination,’ in the Simple option, shows the name of the train and the next
+                    destination of the schedule or the current schedule title.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/9.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/10.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The Detailed one shows the same as the Simple one, but in addition to this, it shows the stops the
+                    train is attempting until the last stop of the schedule.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The Informative one shows the same as the Detailed one, but on top of that, it shows the last stop in
+                    the schedule and the carriage number.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/11.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/13.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The second option at the Display Type section is Passenger Information. In simple, it shows the next
+                    stop with the exit direction when driving, and when the train stopped at a station, it shows the
+                    current stop name.
+                    It also shows the train name and the end stop on longer rides between stations.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">On Detailed, it shows the same as the Simple does, but also the time and speed while riding the
+                    train.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/14.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/15.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">On Informative, it shows everything the Detailed did but all at the same time, and it shows the
+                    stations between the start and the end.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">The last option in the Display Type section is Platform Display. When set to Simple, it shows the
+                    current in-game time, and when a train is approaching the station, it shows the train name with the
+                    time the train is departing, and when set in the global settings, the platform number.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/16.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/17.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">On Detailed, it shows the current time and an overview of the train with departure, the name of the
+                    train, and the schedule title or last station in the schedule.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">On Informative, it shows the next train with the name, departure, and schedule title or last station,
+                    but also the stations between the current station and the last station.
+                    Below this, there is a list of following trains that are approaching this train station.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/18.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 text-center">
+                <a target="_blank"><img src="../assets/pictures/crn/19.png" alt="1 Bild" class="nav-img"
+                        style="width: 350px; height: 350px; margin-right: 20px;"></a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center justify-content-center">
+                <p class="text-center">In the Advanced Display Settings, the last option is just to determine on which side the display
+                    should show the information - on the front, the back, or both sides.
+                    This works on all advanced displays.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br style="margin-bottom: 100px;">
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container text-center">
+            <a href="Impressum.html" style="text-decoration: none; color: white;">Impressum</a> | <a
+                href="Datenschutz.html" style="text-decoration: none; color: white;">Datenschutz</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

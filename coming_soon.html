@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrJulsen Mods</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333333;
+            /* Dunkelgrauer Hintergrund */
+            color: white;
+            /* Weiße Schriftfarbe */
+            font-family: 'Ubuntu', sans-serif;
+            /* Verwendung der Ubuntu-Schriftart */
+        }
+
+        @font-face {
+            font-family: 'Ubuntu';
+            src: url('Ubuntu-Regular.ttf') format('truetype');
+            /* Pfade zur Schriftartdatei */
+        }
+
+        .jumbotron {
+            background-color: rgba(51, 51, 51, 0.5);
+            /* Hintergrund mit Opazität */
+            border-radius: 15px;
+            /* Abgerundete Ecken */
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 200px;
+            /* Größe der Bilder anpassen */
+            height: 200px;
+            /* Größe der Bilder anpassen */
+            margin: 10px;
+            transition: transform 0.3s;
+            /* Übergangseffekt */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+            /* Bilder werden um 10% vergrößert */
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-size: cover;
+            /* Bildgröße anpassen */
+            background-position: top;
+            /* Bildposition */
+            background-repeat: no-repeat;
+            /* Wiederholung des Bildes verhindern */
+        }
+
+        .bg {
+            animation: slide 5s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #050505 50%, #111 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: 0.5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 6s;
+        }
+
+        .bg3 {
+            animation-duration: 7s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-20%);
+            }
+
+            100% {
+                transform: translateX(20%);
+            }
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.5s;
+            box-shadow: 0px 0px 5px 0px gray;
+            /* Anfangsbox-Schatten */
+        }
+
+        /* Runde Bilder */
+        .image-container img.round {
+            border-radius: 50%;
+        }
+
+        /* Eckige Bilder */
+        .image-container img.square {
+            border-radius: 15px;
+            /* Abgerundete Ecken */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px 5px gray;
+            /* Box-Schatten bei Hover-Effekt */
+        }
+
+        /* Neuer Footer-Stil */
+        .footer {
+            background-color: rgba(51, 51, 51, 0.5);
+            /* Hintergrund mit Opazität */
+            border-radius: 15px;
+            /* Abgerundete Ecken */
+            box-shadow: 0px 0px 5px 0px rgb(66, 66, 66);
+            opacity: 0.5;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container mt-5">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container">
+                <h1 class="display-2">Coming Soon!</h1> <!-- Größere Überschrift -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container text-center">
+            <a href="Impressum.html" style="text-decoration: none; color: white;">Impressum</a> | <a
+                href="Datenschutz.html" style="text-decoration: none; color: white;">Datenschutz</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
